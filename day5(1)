@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DaysConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of days: ");
+        int days = scanner.nextInt();
+
+        // Calculate years
+        int years = days / 365;
+        // Calculate remaining days after removing years
+        int remainingDays = days % 365;
+        // Calculate weeks
+        int weeks = remainingDays / 7;
+        // Calculate remaining days after removing weeks
+        remainingDays = remainingDays % 7;
+
+        System.out.println(days + " days is equivalent to:");
+        System.out.println(years + " years");
+        System.out.println(weeks + " weeks");
+        System.out.println(remainingDays + " days");
+    }
+}
